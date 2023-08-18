@@ -18,7 +18,3 @@ config/icon="res://icon.svg"
 [dotnet]
 
 project/assembly_name="Abeja game jam"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"

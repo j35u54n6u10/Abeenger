@@ -32,7 +32,7 @@
 ```console
 > git commit -m "MENSAJE"
 ```
-3. Y para subir las modificaciones, colocas el siguiente comando:
+3. Y para subir las modificaciones a la branch principal, colocas el siguiente comando:
 ```console
 > git push origin main
 ```

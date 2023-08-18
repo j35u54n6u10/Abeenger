@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="Abeja game jam"
-run/main_scene="res://Node2Ds/node_de_prueba_eddy.tscn"
+run/main_scene="res://Node2Ds/first-level-demo.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Abeja game jam"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

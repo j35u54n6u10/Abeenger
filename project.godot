@@ -10,10 +10,17 @@ config_version=5
 
 [application]
 
-config/name="Abeja game jam"
-run/main_scene="res://Node2Ds/first-level-demo.tscn"
+config/name="DemoMGJ"
+run/main_scene="res://levels/first-level-demo.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 
 [dotnet]
 

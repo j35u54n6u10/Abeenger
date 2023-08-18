@@ -1,0 +1,268 @@
+[gd_scene load_steps=50 format=3 uid="uid://daw6vbnxixnh0"]
+
+[ext_resource type="Texture2D" uid="uid://wia103jie7q7" path="res://cosas de godot/TestLevel/color-palette.png" id="1_g7uec"]
+[ext_resource type="Texture2D" uid="uid://qx1xhpljqgav" path="res://cosas de godot/TestLevel/background.png" id="2_unf06"]
+[ext_resource type="Script" path="res://characters/player/player.gd" id="3_3qd5h"]
+[ext_resource type="Texture2D" uid="uid://duu4iwvraq5us" path="res://cosas de godot/abejita/Run/Corriendo0002.png" id="4_pkm2i"]
+[ext_resource type="Texture2D" uid="uid://5702q8puq0kr" path="res://cosas de godot/abejita/Idle/idle0000.png" id="5_t1c6v"]
+[ext_resource type="Texture2D" uid="uid://dm1fci8noo5fy" path="res://cosas de godot/abejita/Idle/idle0003.png" id="6_e42jl"]
+[ext_resource type="Texture2D" uid="uid://cmr166akrrf4b" path="res://cosas de godot/abejita/Idle/idle0004.png" id="7_fatqj"]
+[ext_resource type="Texture2D" uid="uid://criqeprnxxa86" path="res://cosas de godot/abejita/Idle/idle0006.png" id="8_r2d6r"]
+[ext_resource type="Texture2D" uid="uid://cdgbmx88j7pe0" path="res://cosas de godot/abejita/Idle-To-Run/idle_to_run0001.png" id="9_4h7bd"]
+[ext_resource type="Texture2D" uid="uid://bsv65wv7garrs" path="res://cosas de godot/abejita/Idle-To-Run/idle_to_run0002.png" id="10_8o3dd"]
+[ext_resource type="Texture2D" uid="uid://s2ns7r38emd4" path="res://cosas de godot/abejita/Idle-To-Run/idle_to_run0003.png" id="11_ptc4e"]
+[ext_resource type="Texture2D" uid="uid://dqxw75yv4yxcv" path="res://cosas de godot/abejita/Idle-To-Run/idle_to_run0004.png" id="12_ay1uh"]
+[ext_resource type="Texture2D" uid="uid://b1wtvgubxrqsl" path="res://cosas de godot/abejita/salto/jump0001.png" id="13_pndrj"]
+[ext_resource type="Texture2D" uid="uid://cdhj41w046er" path="res://cosas de godot/abejita/doble salto/jump20001.png" id="14_kvb4r"]
+[ext_resource type="Texture2D" uid="uid://bsss4memgcn7i" path="res://cosas de godot/abejita/doble salto/jump20004.png" id="15_yfg2l"]
+[ext_resource type="Texture2D" uid="uid://dsb2rm76kmiwf" path="res://cosas de godot/abejita/doble salto/jump20007.png" id="16_l8g8b"]
+[ext_resource type="Texture2D" uid="uid://cnvhgamit0glr" path="res://cosas de godot/abejita/doble salto/jump20010.png" id="17_ptaa5"]
+[ext_resource type="Texture2D" uid="uid://cn3glay2sd4om" path="res://cosas de godot/abejita/doble salto/jump20013.png" id="18_hyeaf"]
+[ext_resource type="Texture2D" uid="uid://0i56dt800te4" path="res://cosas de godot/abejita/doble salto/jump20015.png" id="19_75cga"]
+[ext_resource type="Texture2D" uid="uid://y2ccs05qqiom" path="res://cosas de godot/abejita/Run/Corriendo0001.png" id="20_i4vjg"]
+[ext_resource type="Texture2D" uid="uid://dw3ca6u0v88cv" path="res://cosas de godot/abejita/Run/Corriendo0004.png" id="21_13vnx"]
+[ext_resource type="Texture2D" uid="uid://cvvvtmjibqhk2" path="res://cosas de godot/abejita/Run/Corriendo0007.png" id="22_omjau"]
+[ext_resource type="Texture2D" uid="uid://ddcup615px0ry" path="res://cosas de godot/abejita/Run/Corriendo0010.png" id="23_mmhxq"]
+[ext_resource type="Texture2D" uid="uid://dvckp7bm66qt6" path="res://cosas de godot/abejita/Run/Corriendo0013.png" id="24_pnx8l"]
+[ext_resource type="Texture2D" uid="uid://cv0n6gt0mtxsh" path="res://cosas de godot/abejita/Run/Corriendo0017.png" id="25_h37al"]
+[ext_resource type="Texture2D" uid="uid://phg7nhogu3mx" path="res://cosas de godot/abejita/Run/Corriendo0019.png" id="26_s8ya2"]
+[ext_resource type="Texture2D" uid="uid://bsiqv3ljtas06" path="res://cosas de godot/abejita/Run/Corriendo0022.png" id="27_dj3sh"]
+[ext_resource type="Texture2D" uid="uid://cn6godn0g3inu" path="res://cosas de godot/abejita/Run/Corriendo0025.png" id="28_10ioy"]
+[ext_resource type="Texture2D" uid="uid://prm1nuv8g3xa" path="res://cosas de godot/abejita/run_to_idle/run_to_idle0001.png" id="29_6ukmu"]
+[ext_resource type="Texture2D" uid="uid://ci8h1medp0llh" path="res://cosas de godot/abejita/run_to_idle/run_to_idle0002.png" id="30_1cdvr"]
+[ext_resource type="Texture2D" uid="uid://b403al375v6ke" path="res://cosas de godot/abejita/run_to_idle/run_to_idle0003.png" id="31_tyow2"]
+[ext_resource type="Texture2D" uid="uid://b7fyrp5urihe0" path="res://cosas de godot/abejita/run_to_idle/run_to_idle0004.png" id="32_4edev"]
+[ext_resource type="Texture2D" uid="uid://d37j3mixq57x2" path="res://cosas de godot/abejita/salto/jump0003.png" id="33_c3dbm"]
+[ext_resource type="Texture2D" uid="uid://t4fallcri18h" path="res://cosas de godot/abejita/salto/jump0004.png" id="34_j37ek"]
+[ext_resource type="Texture2D" uid="uid://cg53ygwish71d" path="res://cosas de godot/abejita/salto/jump0006.png" id="35_sj3ig"]
+[ext_resource type="Texture2D" uid="uid://btjpngl8f43ua" path="res://cosas de godot/abejita/salto/jump0007.png" id="36_nomlt"]
+[ext_resource type="Texture2D" uid="uid://s87m2tyqvxbd" path="res://cosas de godot/abejita/salto/jump0010.png" id="37_53bpp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt46w"]
+texture = ExtResource("1_g7uec")
+margins = Vector2i(1, 1)
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+
+[sub_resource type="TileSet" id="TileSet_5rc8i"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_bt46w")
+
+[sub_resource type="Animation" id="Animation_f250c"]
+resource_name = "Idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6, 1.4, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_t1c6v"), ExtResource("6_e42jl"), ExtResource("7_fatqj"), ExtResource("7_fatqj"), ExtResource("6_e42jl"), ExtResource("8_r2d6r")]
+}
+
+[sub_resource type="Animation" id="Animation_r1pio"]
+resource_name = "Idle to Runa"
+length = 0.34
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("9_4h7bd"), ExtResource("10_8o3dd"), ExtResource("11_ptc4e"), ExtResource("12_ay1uh")]
+}
+
+[sub_resource type="Animation" id="Animation_vfsxt"]
+resource_name = "Jump"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("13_pndrj")]
+}
+
+[sub_resource type="Animation" id="Animation_4je0f"]
+resource_name = "Jump2"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8, 1.3, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_kvb4r"), ExtResource("15_yfg2l"), ExtResource("16_l8g8b"), ExtResource("17_ptaa5"), ExtResource("17_ptaa5"), ExtResource("18_hyeaf"), ExtResource("19_75cga")]
+}
+
+[sub_resource type="Animation" id="Animation_gdmfv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_pkm2i")]
+}
+
+[sub_resource type="Animation" id="Animation_hpl6b"]
+resource_name = "Run "
+length = 2.408
+loop_mode = 1
+step = 1.4465
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.6, 1.8, 2.1, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("20_i4vjg"), ExtResource("21_13vnx"), ExtResource("22_omjau"), ExtResource("23_mmhxq"), ExtResource("24_pnx8l"), ExtResource("25_h37al"), ExtResource("26_s8ya2"), ExtResource("27_dj3sh"), ExtResource("28_10ioy")]
+}
+
+[sub_resource type="Animation" id="Animation_p86hg"]
+resource_name = "Run to idle "
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("29_6ukmu"), ExtResource("30_1cdvr"), ExtResource("31_tyow2"), ExtResource("32_4edev")]
+}
+
+[sub_resource type="Animation" id="Animation_hbc5p"]
+resource_name = "high"
+length = 2.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1, 2.2, 2.4, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("33_c3dbm"), ExtResource("34_j37ek"), ExtResource("35_sj3ig"), ExtResource("36_nomlt"), ExtResource("36_nomlt"), ExtResource("37_53bpp"), ExtResource("37_53bpp")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1kx88"]
+_data = {
+"Idle": SubResource("Animation_f250c"),
+"Idle to Run": SubResource("Animation_r1pio"),
+"Jump": SubResource("Animation_vfsxt"),
+"Jump2": SubResource("Animation_4je0f"),
+"RESET": SubResource("Animation_gdmfv"),
+"Run": SubResource("Animation_hpl6b"),
+"Run to idle ": SubResource("Animation_p86hg"),
+"high": SubResource("Animation_hbc5p")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlos5"]
+size = Vector2(356.25, 314.562)
+
+[node name="Game" type="Node2D"]
+position = Vector2(189, -116)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-189, 116)
+tile_set = SubResource("TileSet_5rc8i")
+cell_quadrant_size = 64
+format = 2
+layer_0/tile_data = PackedInt32Array(1179650, 65536, 0, 1179654, 65536, 0, 1179658, 65536, 0, 1179662, 65536, 0, 1179666, 65536, 0, 1179670, 65536, 0, 1179674, 65536, 0, 1179678, 65536, 0, 1179682, 65536, 0, 1179686, 65536, 0, 1179690, 65536, 0, 1245182, 65536, 0, 1245178, 65536, 0, 1245174, 65536, 0, 1245170, 65536, 0, 917546, 131072, 0, 655406, 131072, 0, 1179694, 65536, 0, 1179698, 65536, 0, 1179702, 65536, 0, 1179706, 65536, 0, 983026, 131072, 0, 720882, 131072, 0, 458738, 131072, 0, 196594, 131072, 0)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-208, 5.00001)
+scale = Vector2(0.440455, 0.446615)
+texture = ExtResource("2_unf06")
+centered = false
+offset = Vector2(6.8, 0)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-122, 188)
+script = ExtResource("3_3qd5h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(-2, -6)
+scale = Vector2(0.12, 0.114445)
+texture = ExtResource("4_pkm2i")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-2, -6)
+zoom = Vector2(1.815, 1.815)
+position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+root_node = NodePath("../Sprite2D")
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_1kx88")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-2.375, -7)
+scale = Vector2(0.12, 0.114445)
+shape = SubResource("RectangleShape2D_qlos5")

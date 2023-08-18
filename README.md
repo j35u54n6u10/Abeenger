@@ -3,12 +3,15 @@
 
 ## TO-DO relacionado con la estructura del proyecto
 
-> Se recomienda utilizar "lower-kebab-case" para asignar los nombres de los archivos
-- [ ] Cambiar nombre de la carpeta de los "cosas de godot" a "Assets"
+> * Se usa snake_case para los nombres de las carpetas y archivos
+> * Se usa PascalCase para los nombre de los nodos
+> * Y en general, para recursos de terceros, agregarlos a la carpeta _addons/_
+
 - [ ] Actualizar las referencias de cada archivo utilizado dentro del godot con su nueva ubicación
 - [ ] Eliminar las carpetas y documentos que no sean necesarias una vez ya descartadas, como los recursos de prueba como "FreeCuteTileset", "legacy fantasy high forest" "monstardt tree"
-- [ ] Organizar todos los archivos _.tscn_ en una sola carpeta
-- [ ] Organizar todos los scripts en una sola carpeta
+- [ ] Organizar todos los archivos _.tscn_ en su respectiva carpeta
+- [x] Organizar todos los scripts en carpetas con su respectiva carpeta
+
 ## Pasos para actualizar repositorio desde terminal
 
 > Si es primera vez, tienes que configurar tu usuario en la terminal.
@@ -44,3 +47,8 @@
 ```console
 > git push origin main
 ```
+
+### Pasos para importar los cambios del repositorio repoto al local
+...
+### Estructura del proyecto
+...

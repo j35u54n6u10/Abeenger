@@ -1,7 +1,15 @@
 # DemoMGJ
 ...
 
-## Pasos para actualizar repositorio
+## TO-DO relacionado con la estructura del proyecto
+
+> Se recomienda utilizar "lower-kebab-case" para asignar los nombres de los archivos
+- [ ] Cambiar nombre de la carpeta de los "cosas de godot" a "Assets"
+- [ ] Actualizar las referencias de cada archivo utilizado dentro del godot con su nueva ubicación
+- [ ] Eliminar las carpetas y documentos que no sean necesarias una vez ya descartadas, como los recursos de prueba como "FreeCuteTileset", "legacy fantasy high forest" "monstardt tree"
+- [ ] Organizar todos los archivos _.tscn_ en una sola carpeta
+- [ ] Organizar todos los scripts en una sola carpeta
+## Pasos para actualizar repositorio desde terminal
 
 > Si es primera vez, tienes que configurar tu usuario en la terminal.
 

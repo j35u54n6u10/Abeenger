@@ -16,6 +16,11 @@ const gravity := 30
 var acc = 50 
 var friccion = 20
 
+# Wall Jumping y Sliding
+const wall_jump_pb = 400
+const wall_slide_gravity = 100
+var wall_sliding = false
+
 @onready var anim := $AnimationPlayer
 @onready var sprite := $Sprite2D
 
@@ -37,7 +42,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		if current_jump < max_jump:
 			velocity.y -= velocity.y + jump
-			current_jump = current_jump + 1
+			current_jump = current_jump + 1	
+			
 	#esto resetea el saltiño
 	if is_on_floor():
 		current_jump = 1
@@ -87,3 +93,14 @@ func agregar_friccion():
 
 func movimiento_jugador():
 	move_and_slide()
+	
+
+func wall_slide_movement():
+	
+
+
+
+
+
+
+

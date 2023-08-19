@@ -95,7 +95,7 @@ func movimiento_jugador():
 	move_and_slide()
 	
 
-func wall_slide_movement():
+#func wall_slide_movement():
 	
 
 

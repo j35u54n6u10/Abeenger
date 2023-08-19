@@ -48,7 +48,7 @@
 > git push origin main
 ```
 
-### Pasos para importar los cambios del repositorio repoto al local
+### Pasos para importar los cambios del repositorio remoto al local
 ...
 ### Estructura del proyecto
 ...

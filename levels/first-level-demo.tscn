@@ -47,29 +47,30 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 3:0/0 = 0
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 4:0/0 = 0
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 5:0/0 = 0
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33.186, -31.6269, 31.4042, -32.0724, 31.8496, 32.0723, -31.4042, 32.0723, -31.4042, -26.727)
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_5rc8i"]
+tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bt46w")
 
@@ -225,7 +226,6 @@ position = Vector2(189, -116)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_wfd34")
-autoplay = true
 bus = &"JazzBase"
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -233,7 +233,7 @@ position = Vector2(-189, 116)
 tile_set = SubResource("TileSet_5rc8i")
 cell_quadrant_size = 64
 format = 2
-layer_0/tile_data = PackedInt32Array(1179650, 65536, 0, 1179654, 65536, 0, 1179658, 65536, 0, 1179662, 65536, 0, 1179666, 65536, 0, 1179670, 65536, 0, 1179674, 65536, 0, 1179678, 65536, 0, 1179682, 65536, 0, 1179686, 65536, 0, 1179690, 65536, 0, 1245182, 65536, 0, 1245178, 65536, 0, 1245174, 65536, 0, 1245170, 65536, 0, 917546, 131072, 0, 655406, 131072, 0, 1179694, 65536, 0, 1179698, 65536, 0, 1179702, 65536, 0, 1179706, 65536, 0, 983026, 131072, 0, 720882, 131072, 0, 458738, 131072, 0, 196594, 131072, 0, 1179710, 65536, 0, 1179714, 65536, 0, 1179718, 65536, 0, 1179722, 65536, 0, 1179726, 65536, 0, 1179730, 65536, 0, 1179734, 65536, 0, 1179738, 65536, 0, 1179742, 65536, 0, 1179746, 65536, 0, 1179750, 65536, 0, 1179754, 65536, 0, 1179758, 65536, 0, 917614, 65536, 0, 655470, 65536, 0, 393326, 65536, 0, 131182, 65536, 0, 393266, 131072, 0, 917572, 196608, 0, 655428, 196608, 0, 393284, 196608, 0, 917587, 196608, 0, 655443, 196608, 0, 393299, 196608, 0)
+layer_0/tile_data = PackedInt32Array(262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 131078, 0, 0, 65542, 0, 0, 131081, 0, 0, 65545, 0, 0, 196607, 0, 0, 131071, 0, 0, 65535, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

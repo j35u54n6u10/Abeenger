@@ -76,6 +76,7 @@ func _physics_process(delta):
 			else:
 				anim.play("high")
 				
+	wall_slide_movement()
 	movimiento_jugador()
 
 func input() -> Vector2:
@@ -95,8 +96,27 @@ func movimiento_jugador():
 	move_and_slide()
 	
 
-#func wall_slide_movement():
+func wall_slide_movement():
 	
+	if is_on_floor() and is_on_wall() and (Input.is_action_just_pressed("ui_up") or Input.is_action_pressed("ui_up")) and (Input.is_action_just_pressed("ui_left")):
+		velocity.y += velocity.y
+	
+	if is_on_floor() and is_on_wall() and (Input.is_action_just_pressed("ui_up") or Input.is_action_pressed("ui_up")) and (Input.is_action_just_pressed("ui_right")):
+		velocity.y += velocity.y
+	
+	if is_on_wall_only() and !is_on_floor() and !Input.is_action_just_pressed("ui_left"):
+		velocity.y -= velocity.y - 100
+		if is_on_wall_only():
+			current_jump = 1
+		else:
+			current_jump = 0
+
+	if is_on_wall_only() and !is_on_floor() and !Input.is_action_just_pressed("ui_right"):
+		velocity.y -= velocity.y - 100
+		if is_on_wall_only() == true:
+			current_jump = 1
+		else:
+			current_jump = 0
 
 
 

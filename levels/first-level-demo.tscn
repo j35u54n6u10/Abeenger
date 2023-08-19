@@ -1,6 +1,7 @@
-[gd_scene load_steps=50 format=3 uid="uid://daw6vbnxixnh0"]
+[gd_scene load_steps=51 format=3 uid="uid://daw6vbnxixnh0"]
 
 [ext_resource type="Texture2D" uid="uid://wia103jie7q7" path="res://cosas de godot/TestLevel/color-palette.png" id="1_g7uec"]
+[ext_resource type="AudioStream" uid="uid://kyvjdbknoyvi" path="res://common/music/BeatJazzBaseGame.mp3" id="1_wfd34"]
 [ext_resource type="Texture2D" uid="uid://qx1xhpljqgav" path="res://cosas de godot/TestLevel/background.png" id="2_unf06"]
 [ext_resource type="Script" path="res://characters/player/player.gd" id="3_3qd5h"]
 [ext_resource type="Texture2D" uid="uid://duu4iwvraq5us" path="res://cosas de godot/abejita/Run/Corriendo0002.png" id="4_pkm2i"]
@@ -222,12 +223,17 @@ size = Vector2(356.25, 314.562)
 [node name="Game" type="Node2D"]
 position = Vector2(189, -116)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_wfd34")
+autoplay = true
+bus = &"JazzBase"
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-189, 116)
 tile_set = SubResource("TileSet_5rc8i")
 cell_quadrant_size = 64
 format = 2
-layer_0/tile_data = PackedInt32Array(1179650, 65536, 0, 1179654, 65536, 0, 1179658, 65536, 0, 1179662, 65536, 0, 1179666, 65536, 0, 1179670, 65536, 0, 1179674, 65536, 0, 1179678, 65536, 0, 1179682, 65536, 0, 1179686, 65536, 0, 1179690, 65536, 0, 1245182, 65536, 0, 1245178, 65536, 0, 1245174, 65536, 0, 1245170, 65536, 0, 917546, 131072, 0, 655406, 131072, 0, 1179694, 65536, 0, 1179698, 65536, 0, 1179702, 65536, 0, 1179706, 65536, 0, 983026, 131072, 0, 720882, 131072, 0, 458738, 131072, 0, 196594, 131072, 0)
+layer_0/tile_data = PackedInt32Array(1179650, 65536, 0, 1179654, 65536, 0, 1179658, 65536, 0, 1179662, 65536, 0, 1179666, 65536, 0, 1179670, 65536, 0, 1179674, 65536, 0, 1179678, 65536, 0, 1179682, 65536, 0, 1179686, 65536, 0, 1179690, 65536, 0, 1245182, 65536, 0, 1245178, 65536, 0, 1245174, 65536, 0, 1245170, 65536, 0, 917546, 131072, 0, 655406, 131072, 0, 1179694, 65536, 0, 1179698, 65536, 0, 1179702, 65536, 0, 1179706, 65536, 0, 983026, 131072, 0, 720882, 131072, 0, 458738, 131072, 0, 196594, 131072, 0, 1179710, 65536, 0, 1179714, 65536, 0, 1179718, 65536, 0, 1179722, 65536, 0, 1179726, 65536, 0, 1179730, 65536, 0, 1179734, 65536, 0, 1179738, 65536, 0, 1179742, 65536, 0, 1179746, 65536, 0, 1179750, 65536, 0, 1179754, 65536, 0, 1179758, 65536, 0, 917614, 65536, 0, 655470, 65536, 0, 393326, 65536, 0, 131182, 65536, 0, 393266, 131072, 0, 917572, 196608, 0, 655428, 196608, 0, 393284, 196608, 0, 917587, 196608, 0, 655443, 196608, 0, 393299, 196608, 0)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

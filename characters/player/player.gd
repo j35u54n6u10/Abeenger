@@ -21,10 +21,15 @@ const wall_jump_pb = 400
 const wall_slide_gravity = 100
 var wall_sliding = false
 
+# Dash
+@export var can_dash: bool
+var dash: bool
+
 @onready var anim := $AnimationPlayer
 @onready var sprite := $Sprite2D
 
-func _physics_process(delta):
+			
+func _physics_process(_delta):
 	direccion = Input.get_axis("ui_left","ui_right")
 	#velocity.x = direccion * speed
 
@@ -37,7 +42,17 @@ func _physics_process(delta):
 		agregar_friccion()
 
 	sprite.flip_h = direccion < 0 if direccion != 0 else sprite.flip_h
-	
+		
+	match dash:
+		true:
+			input_dir.x = input_dir.x * (speed * 2) 
+			
+			if anim.play() == "Jump" or anim.play() == "Jump2":
+				velocity.y += gravity
+		false:
+			velocity.y += gravity
+			input_dir.x = input_dir.x * (speed * 2)
+			
 	#esta monda es para el primer salto desde el piso
 	if Input.is_action_just_pressed("ui_accept"):
 		if current_jump < max_jump:
@@ -47,14 +62,7 @@ func _physics_process(delta):
 	#esto resetea el saltiño
 	if is_on_floor():
 		current_jump = 1
-		
-	#pal segundo salto o para saltar desde el aire
-	if !is_on_floor() and Input.is_action_just_pressed("ui_accept"):
-		if current_jump != max_jump:
-			velocity.y -= velocity.y + jump 
-			current_jump = current_jump + 1
-	if is_on_floor():
-		current_jump = 1
+
 
 	if !is_on_floor():
 		velocity.y += (gravity + acc) - (friccion)
@@ -70,6 +78,11 @@ func _physics_process(delta):
 				anim.play("Jump")
 			else:
 				anim.play("high")
+				
+		if is_on_wall_only():
+			sprite.flip_h = direccion > 0 if direccion != 0 else sprite.flip_h
+			anim.play("Grab")		
+				
 		if current_jump == 2:
 			if velocity.y < 0:
 				anim.play("Jump2")
@@ -78,6 +91,8 @@ func _physics_process(delta):
 				
 	wall_slide_movement()
 	movimiento_jugador()
+	dash_movement()
+	
 
 func input() -> Vector2:
 	var input_dir = Vector2.ZERO
@@ -103,24 +118,23 @@ func wall_slide_movement():
 	
 	if is_on_floor() and is_on_wall() and (Input.is_action_just_pressed("ui_up") or Input.is_action_pressed("ui_up")) and (Input.is_action_just_pressed("ui_right")):
 		velocity.y += velocity.y
-	
-	if is_on_wall_only() and !is_on_floor() and !Input.is_action_just_pressed("ui_left"):
-		velocity.y -= velocity.y - 100
-		if is_on_wall_only():
+		
+	if is_on_wall_only():
+			velocity.y -= velocity.y - 100
 			current_jump = 1
-		else:
-			current_jump = 0
+			if Input.is_key_pressed(KEY_SHIFT):
+				velocity.y -= velocity.y
 
-	if is_on_wall_only() and !is_on_floor() and !Input.is_action_just_pressed("ui_right"):
-		velocity.y -= velocity.y - 100
-		if is_on_wall_only() == true:
-			current_jump = 1
-		else:
-			current_jump = 0
+func dash_movement():
+	if can_dash and Input.is_action_just_pressed("Dash"):
+		dash = true
+		can_dash = true
+		$Dash.play()
+		$Timers/Dash.start()
 
+func _on_dash_timeout():
+	dash = false
+	$Timers/CanDash.start()
 
-
-
-
-
-
+func _on_can_dash_timeout():
+	can_dash = true
